@@ -1,3 +1,7 @@
+## Instale as dependencias com o comando
+
+### `npm instal`
+
 ## Scripts Disponíveis
 
 No diretório do projeto, você pode executar:
