@@ -1,6 +1,6 @@
 ## Instale as dependencias com o comando
 
-### `npm instal`
+### `npm install`
 
 ## Scripts Disponíveis
 
