@@ -3,9 +3,9 @@ import React from "react";
 
 import "./Header.css";
 
-export default ({black}) => {
+export default ({ black }) => {
   return (
-    <header className={black ? 'black' : ''}>
+    <header className={black ? "black" : ""}>
       <div className="header--logo">
         <a href="/">
           <img
@@ -14,6 +14,7 @@ export default ({black}) => {
           />
         </a>
       </div>
+      
       <div className="header--user">
         <a href="/">
           <img

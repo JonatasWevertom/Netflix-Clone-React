@@ -1,9 +1,9 @@
 /* eslint-disable import/no-anonymous-default-export */
 import React, { useEffect, useState } from "react";
 import Tmdb from "./Tmdb";
+import Header from "./components/Header/Header";
 import MovieRow from "./components/MovieRow/MovieRow";
 import FeaturedMovie from "./components/FeaturedMovie/FeaturedMovie";
-import Header from "./components/Header/Header";
 
 import "./App.css";
 
@@ -60,13 +60,25 @@ export default () => {
       </section>
 
       <footer>
-        Feito com 
-        <span role="img" aria-label="coração"> ♥ </span>
+        Feito com{" "}
+        <span role="img" aria-label="coração">
+          ❤️
+        </span>{" "}
         por Jonatas Weverton!
         <br />
-        Direitos de imagem para Netflix <br />
-        Dados pegos do iste Themoviedb.org
+        Direitos de imagem para Netflix
+        <br />
+        Dados pegos do site Themoviedb.org
       </footer>
+
+      {movieList.length <= 0 && (
+        <div className="loading">
+          <img
+            src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif"
+            alt="Loading..."
+          ></img>
+        </div>
+      )}
     </div>
   );
 };

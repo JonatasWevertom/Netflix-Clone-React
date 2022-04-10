@@ -8,8 +8,15 @@ export default ({ item }) => {
 
   let fristDate = new Date(item.first_air_date);
   let genres = [];
+
   for (let i in item.genres) {
     genres.push(item.genres[i].name);
+  }
+
+  let description = item.overview;
+
+  if (description.length > 200) {
+    description = description.substring(0, 400) + "...";
   }
 
   return (
@@ -37,7 +44,7 @@ export default ({ item }) => {
             </div>
           </div>
 
-          <div className="featured--description"> {item.overview} </div>
+          <div className="featured--description"> {description} </div>
 
           <div className="featured--buttons">
             <a href={`/watch/${item.id}`} className="featured--watchbutton">
